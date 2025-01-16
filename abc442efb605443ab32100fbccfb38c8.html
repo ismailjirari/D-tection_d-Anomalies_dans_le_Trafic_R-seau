@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>265a5eb6facd427783016fb660ad8a5e</title>
+  <title>a70c118634bb488fae9b841215f57217</title>
   <style>
     html {
       line-height: 1.5;
@@ -230,11 +230,123 @@
 <div id="58e21503" class="cell markdown">
 <h1 id="projet--détection-danomalies-dans-le-trafic-réseau">Projet :
 Détection d'Anomalies dans le Trafic Réseau</h1>
+<h2 id="realise-par--ismail-jirari-et-abderrahmane-benhayoun">Realise
+par : Ismail Jirari ET Abderrahmane Benhayoun</h2>
 <p>L'objectif de ce projet est de détecter des anomalies dans le trafic
 réseau en utilisant des modèles de mélange gaussien (GMM). Les GMM sont
 des outils puissants pour la détection d'anomalies non supervisée,
 particulièrement adaptés pour identifier les connexions réseau
 malveillantes dans des ensembles de données comme KDDCup99.</p>
+</div>
+<div id="ca197c9b" class="cell markdown">
+<h2 id="définition">Définition</h2>
+<h3 id="modèles-de-mélange-gaussien-gmm-">Modèles de Mélange Gaussien
+(GMM) :</h3>
+<p>Un modèle de mélange gaussien (GMM) est une méthode statistique
+utilisée pour modéliser la distribution des données en supposant que les
+données sont générées à partir d'un mélange de plusieurs distributions
+gaussiennes. Chaque composante gaussienne du mélange est caractérisée
+par sa moyenne et sa covariance. Les GMM sont couramment utilisés pour
+la classification, la détection d'anomalies et le clustering non
+supervisé.</p>
+<h3 id="trafic-réseau-">Trafic Réseau :</h3>
+<p>Le trafic réseau fait référence à la quantité de données circulant
+sur un réseau informatique à un moment donné. Il comprend toutes les
+communications de données, y compris les requêtes et réponses entre les
+clients et les serveurs, les transferts de fichiers, les courriels, la
+navigation web, etc. L'analyse du trafic réseau est essentielle pour la
+gestion de la performance, la sécurité et la détection d'anomalies dans
+les réseaux.</p>
+</div>
+<div id="026e6024" class="cell markdown">
+<p>Ce fichier CSV semble contenir des données de trafic réseau,
+probablement utilisées pour la détection d'anomalies ou d'intrusions.
+Chaque ligne représente une connexion réseau avec plusieurs
+caractéristiques. Voici une explication des colonnes :</p>
+<ul>
+<li><strong>duration</strong> : Durée de la connexion en secondes.</li>
+<li><strong>protocol_type</strong> : Type de protocole (e.g., TCP, UDP,
+ICMP).</li>
+<li><strong>service</strong> : Service réseau utilisé (e.g., HTTP, FTP,
+SMTP).</li>
+<li><strong>flag</strong> : État de la connexion (e.g., SF pour
+"successful connection").</li>
+<li><strong>src_bytes</strong> : Nombre de bytes envoyés par la
+source.</li>
+<li><strong>dst_bytes</strong> : Nombre de bytes reçus par la
+destination.</li>
+<li><strong>land</strong> : Indicateur si la connexion est vers la même
+machine (0 ou 1).</li>
+<li><strong>wrong_fragment</strong> : Nombre de fragments
+incorrects.</li>
+<li><strong>urgent</strong> : Nombre de paquets urgents.</li>
+<li><strong>hot</strong> : Nombre d'actions "chaudes" (e.g., accès à des
+fichiers système).</li>
+<li><strong>num_failed_logins</strong> : Nombre de tentatives de
+connexion échouées.</li>
+<li><strong>logged_in</strong> : Indicateur si l'utilisateur est
+connecté (0 ou 1).</li>
+<li><strong>lnum_compromised</strong> : Nombre de conditions
+compromises.</li>
+<li><strong>lroot_shell</strong> : Indicateur si un shell root a été
+obtenu (0 ou 1).</li>
+<li><strong>lsu_attempted</strong> : Nombre de tentatives de commande
+"su".</li>
+<li><strong>lnum_root</strong> : Nombre de processus root.</li>
+<li><strong>lnum_file_creations</strong> : Nombre de créations de
+fichiers.</li>
+<li><strong>lnum_shells</strong> : Nombre de shells ouverts.</li>
+<li><strong>lnum_access_files</strong> : Nombre d'accès à des
+fichiers.</li>
+<li><strong>lnum_outbound_cmds</strong> : Nombre de commandes
+sortantes.</li>
+<li><strong>is_host_login</strong> : Indicateur si c'est une connexion
+de l'hôte (0 ou 1).</li>
+<li><strong>is_guest_login</strong> : Indicateur si c'est une connexion
+d'invité (0 ou 1).</li>
+<li><strong>count</strong> : Nombre de connexions vers la même
+destination dans les 2 secondes.</li>
+<li><strong>srv_count</strong> : Nombre de connexions vers le même
+service dans les 2 secondes.</li>
+<li><strong>serror_rate</strong> : Taux de connexions ayant des erreurs
+SYN.</li>
+<li><strong>srv_serror_rate</strong> : Taux de connexions au même
+service ayant des erreurs SYN.</li>
+<li><strong>rerror_rate</strong> : Taux de connexions ayant des erreurs
+RST.</li>
+<li><strong>srv_rerror_rate</strong> : Taux de connexions au même
+service ayant des erreurs RST.</li>
+<li><strong>same_srv_rate</strong> : Taux de connexions au même
+service.</li>
+<li><strong>diff_srv_rate</strong> : Taux de connexions à des services
+différents.</li>
+<li><strong>srv_diff_host_rate</strong> : Taux de connexions au même
+service mais à des hôtes différents.</li>
+<li><strong>dst_host_count</strong> : Nombre de connexions vers la même
+destination.</li>
+<li><strong>dst_host_srv_count</strong> : Nombre de connexions vers le
+même service à la même destination.</li>
+<li><strong>dst_host_same_srv_rate</strong> : Taux de connexions vers le
+même service à la même destination.</li>
+<li><strong>dst_host_diff_srv_rate</strong> : Taux de connexions vers
+des services différents à la même destination.</li>
+<li><strong>dst_host_same_src_port_rate</strong> : Taux de connexions
+vers la même destination et le même port source.</li>
+<li><strong>dst_host_srv_diff_host_rate</strong> : Taux de connexions
+vers le même service mais à des hôtes différents.</li>
+<li><strong>dst_host_serror_rate</strong> : Taux de connexions vers la
+même destination ayant des erreurs SYN.</li>
+<li><strong>dst_host_srv_serror_rate</strong> : Taux de connexions vers
+le même service à la même destination ayant des erreurs SYN.</li>
+<li><strong>dst_host_rerror_rate</strong> : Taux de connexions vers la
+même destination ayant des erreurs RST.</li>
+<li><strong>dst_host_srv_rerror_rate</strong> : Taux de connexions vers
+le même service à la même destination ayant des erreurs RST.</li>
+<li><strong>label</strong> : Étiquette indiquant si la connexion est
+normale ou une attaque.</li>
+</ul>
+<p>Ces caractéristiques sont souvent utilisées dans les algorithmes de
+machine learning pour détecter des anomalies dans le trafic réseau.</p>
 </div>
 <div id="da3b3037" class="cell markdown">
 <h2 id="1-pré-requis">1. Pré-requis</h2>
@@ -255,18 +367,319 @@ les Données</h2>
 </div>
 <div id="bf3f19b8" class="cell code" data-execution_count="15">
 <div class="sourceCode" id="cb1"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Charger les données</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">&#39;KDDCup99.csv&#39;</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.head())</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.impute <span class="im">import</span> KNNImputer</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Charger les données</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">&#39;KDDCup99.csv&#39;</span>)</span></code></pre></div>
+</div>
+<div id="40f5bf75" class="cell code" data-execution_count="16">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="16">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>duration</th>
+      <th>protocol_type</th>
+      <th>service</th>
+      <th>flag</th>
+      <th>src_bytes</th>
+      <th>dst_bytes</th>
+      <th>land</th>
+      <th>wrong_fragment</th>
+      <th>urgent</th>
+      <th>hot</th>
+      <th>...</th>
+      <th>dst_host_srv_count</th>
+      <th>dst_host_same_srv_rate</th>
+      <th>dst_host_diff_srv_rate</th>
+      <th>dst_host_same_src_port_rate</th>
+      <th>dst_host_srv_diff_host_rate</th>
+      <th>dst_host_serror_rate</th>
+      <th>dst_host_srv_serror_rate</th>
+      <th>dst_host_rerror_rate</th>
+      <th>dst_host_srv_rerror_rate</th>
+      <th>label</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>tcp</td>
+      <td>http</td>
+      <td>SF</td>
+      <td>181</td>
+      <td>5450</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>9</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.11</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>tcp</td>
+      <td>http</td>
+      <td>SF</td>
+      <td>239</td>
+      <td>486</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>19</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.05</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0</td>
+      <td>tcp</td>
+      <td>http</td>
+      <td>SF</td>
+      <td>235</td>
+      <td>1337</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>29</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.03</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0</td>
+      <td>tcp</td>
+      <td>http</td>
+      <td>SF</td>
+      <td>219</td>
+      <td>1337</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>39</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.03</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>normal</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0</td>
+      <td>tcp</td>
+      <td>http</td>
+      <td>SF</td>
+      <td>217</td>
+      <td>2032</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>49</td>
+      <td>1.0</td>
+      <td>0.0</td>
+      <td>0.02</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>normal</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 42 columns</p>
+</div>
+</div>
+</div>
+<div id="b37dfd28" class="cell markdown">
+<h3 id="nettoyage-des-données-">Nettoyage des données :</h3>
+<p>Gérez les valeurs manquantes et encodez les colonnes catégoriques
+(e.g., <code>protocol_type</code>, <code>service</code>,
+<code>flag</code>).</p>
+</div>
+<div id="c1e1ff08" class="cell code" data-execution_count="17">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualiser les valeurs manquantes avec missingno</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>msno.matrix(data)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_09827274d11045d49006052736c459a6/09b4190b3b722fb9ae0150cd716ebfba7d43ee18.png" /></p>
+</div>
+</div>
+<div id="dbef0206" class="cell code" data-execution_count="31">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compter les valeurs manquantes pour chaque colonne</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>missing_counts <span class="op">=</span> data.isnull().<span class="bu">sum</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Valeurs manquantes par colonne :</span><span class="ch">\n</span><span class="st">&quot;</span>, missing_counts)</span></code></pre></div>
 <div class="output stream stdout">
-<pre><code>   duration protocol_type service flag  src_bytes  dst_bytes  land   
-0         0           tcp    http   SF        181       5450     0  \
-1         0           tcp    http   SF        239        486     0   
-2         0           tcp    http   SF        235       1337     0   
-3         0           tcp    http   SF        219       1337     0   
-4         0           tcp    http   SF        217       2032     0   
+<pre><code>Valeurs manquantes par colonne :
+ duration                       0
+protocol_type                  0
+service                        0
+flag                           0
+src_bytes                      0
+dst_bytes                      0
+land                           0
+wrong_fragment                 0
+urgent                         0
+hot                            0
+num_failed_logins              0
+logged_in                      0
+lnum_compromised               0
+lroot_shell                    0
+lsu_attempted                  0
+lnum_root                      0
+lnum_file_creations            0
+lnum_shells                    0
+lnum_access_files              0
+lnum_outbound_cmds             0
+is_host_login                  0
+is_guest_login                 0
+count                          0
+srv_count                      0
+serror_rate                    0
+srv_serror_rate                0
+rerror_rate                    0
+srv_rerror_rate                0
+same_srv_rate                  0
+diff_srv_rate                  0
+srv_diff_host_rate             0
+dst_host_count                 0
+dst_host_srv_count             0
+dst_host_same_srv_rate         0
+dst_host_diff_srv_rate         0
+dst_host_same_src_port_rate    0
+dst_host_srv_diff_host_rate    0
+dst_host_serror_rate           0
+dst_host_srv_serror_rate       0
+dst_host_rerror_rate           0
+dst_host_srv_rerror_rate       0
+label                          0
+dtype: int64
+</code></pre>
+</div>
+</div>
+<div id="a8a283d4" class="cell code" data-execution_count="32">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les lignes avec des valeurs manquantes</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>data_cleaned_rows <span class="op">=</span> data.dropna()</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Données après suppression des lignes avec valeurs manquantes :&quot;</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_cleaned_rows.head())</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Supprimer les colonnes avec des valeurs manquantes</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>data_cleaned_columns <span class="op">=</span> data.dropna(axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Données après suppression des colonnes avec valeurs manquantes :&quot;</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_cleaned_columns.head())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Données après suppression des lignes avec valeurs manquantes :
+   duration  protocol_type service flag  src_bytes  dst_bytes  land   
+0         0              1    http   SF        181       5450     0  \
+1         0              1    http   SF        239        486     0   
+2         0              1    http   SF        235       1337     0   
+3         0              1    http   SF        219       1337     0   
+4         0              1    http   SF        217       2032     0   
+
+   wrong_fragment  urgent  hot  ...  dst_host_srv_count   
+0               0       0    0  ...                   9  \
+1               0       0    0  ...                  19   
+2               0       0    0  ...                  29   
+3               0       0    0  ...                  39   
+4               0       0    0  ...                  49   
+
+   dst_host_same_srv_rate  dst_host_diff_srv_rate   
+0                     1.0                     0.0  \
+1                     1.0                     0.0   
+2                     1.0                     0.0   
+3                     1.0                     0.0   
+4                     1.0                     0.0   
+
+   dst_host_same_src_port_rate  dst_host_srv_diff_host_rate   
+0                         0.11                          0.0  \
+1                         0.05                          0.0   
+2                         0.03                          0.0   
+3                         0.03                          0.0   
+4                         0.02                          0.0   
+
+   dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate   
+0                   0.0                       0.0                   0.0  \
+1                   0.0                       0.0                   0.0   
+2                   0.0                       0.0                   0.0   
+3                   0.0                       0.0                   0.0   
+4                   0.0                       0.0                   0.0   
+
+   dst_host_srv_rerror_rate   label  
+0                       0.0  normal  
+1                       0.0  normal  
+2                       0.0  normal  
+3                       0.0  normal  
+4                       0.0  normal  
+
+[5 rows x 42 columns]
+Données après suppression des colonnes avec valeurs manquantes :
+   duration  protocol_type service flag  src_bytes  dst_bytes  land   
+0         0              1    http   SF        181       5450     0  \
+1         0              1    http   SF        239        486     0   
+2         0              1    http   SF        235       1337     0   
+3         0              1    http   SF        219       1337     0   
+4         0              1    http   SF        217       2032     0   
 
    wrong_fragment  urgent  hot  ...  dst_host_srv_count   
 0               0       0    0  ...                   9  \
@@ -307,52 +720,549 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a hr
 </code></pre>
 </div>
 </div>
-<div id="b37dfd28" class="cell markdown">
-<h3 id="nettoyage-des-données-">Nettoyage des données :</h3>
-<p>Gérez les valeurs manquantes et encodez les colonnes catégoriques
-(e.g., <code>protocol_type</code>, <code>service</code>,
-<code>flag</code>).</p>
+<div id="f635f712" class="cell code" data-execution_count="33">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Imputation par la moyenne</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>data_mean_imputed <span class="op">=</span> data.copy()</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> data.columns:</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> data[column].isnull().<span class="bu">sum</span>() <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        data_mean_imputed[column] <span class="op">=</span> data[column].fillna(data[column].mean())</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Données après imputation par la moyenne :&quot;</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_mean_imputed.head())</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Imputation par la médiane</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>data_median_imputed <span class="op">=</span> data.copy()</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> data.columns:</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> data[column].isnull().<span class="bu">sum</span>() <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>        data_median_imputed[column] <span class="op">=</span> data[column].fillna(data[column].median())</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Données après imputation par la médiane :&quot;</span>)</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_median_imputed.head())</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Imputation par le mode</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>data_mode_imputed <span class="op">=</span> data.copy()</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> data.columns:</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> data[column].isnull().<span class="bu">sum</span>() <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>        data_mode_imputed[column] <span class="op">=</span> data[column].fillna(data[column].mode()[<span class="dv">0</span>])</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Données après imputation par le mode :&quot;</span>)</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_mode_imputed.head())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Données après imputation par la moyenne :
+   duration  protocol_type service flag  src_bytes  dst_bytes  land   
+0         0              1    http   SF        181       5450     0  \
+1         0              1    http   SF        239        486     0   
+2         0              1    http   SF        235       1337     0   
+3         0              1    http   SF        219       1337     0   
+4         0              1    http   SF        217       2032     0   
+
+   wrong_fragment  urgent  hot  ...  dst_host_srv_count   
+0               0       0    0  ...                   9  \
+1               0       0    0  ...                  19   
+2               0       0    0  ...                  29   
+3               0       0    0  ...                  39   
+4               0       0    0  ...                  49   
+
+   dst_host_same_srv_rate  dst_host_diff_srv_rate   
+0                     1.0                     0.0  \
+1                     1.0                     0.0   
+2                     1.0                     0.0   
+3                     1.0                     0.0   
+4                     1.0                     0.0   
+
+   dst_host_same_src_port_rate  dst_host_srv_diff_host_rate   
+0                         0.11                          0.0  \
+1                         0.05                          0.0   
+2                         0.03                          0.0   
+3                         0.03                          0.0   
+4                         0.02                          0.0   
+
+   dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate   
+0                   0.0                       0.0                   0.0  \
+1                   0.0                       0.0                   0.0   
+2                   0.0                       0.0                   0.0   
+3                   0.0                       0.0                   0.0   
+4                   0.0                       0.0                   0.0   
+
+   dst_host_srv_rerror_rate   label  
+0                       0.0  normal  
+1                       0.0  normal  
+2                       0.0  normal  
+3                       0.0  normal  
+4                       0.0  normal  
+
+[5 rows x 42 columns]
+Données après imputation par la médiane :
+   duration  protocol_type service flag  src_bytes  dst_bytes  land   
+0         0              1    http   SF        181       5450     0  \
+1         0              1    http   SF        239        486     0   
+2         0              1    http   SF        235       1337     0   
+3         0              1    http   SF        219       1337     0   
+4         0              1    http   SF        217       2032     0   
+
+   wrong_fragment  urgent  hot  ...  dst_host_srv_count   
+0               0       0    0  ...                   9  \
+1               0       0    0  ...                  19   
+2               0       0    0  ...                  29   
+3               0       0    0  ...                  39   
+4               0       0    0  ...                  49   
+
+   dst_host_same_srv_rate  dst_host_diff_srv_rate   
+0                     1.0                     0.0  \
+1                     1.0                     0.0   
+2                     1.0                     0.0   
+3                     1.0                     0.0   
+4                     1.0                     0.0   
+
+   dst_host_same_src_port_rate  dst_host_srv_diff_host_rate   
+0                         0.11                          0.0  \
+1                         0.05                          0.0   
+2                         0.03                          0.0   
+3                         0.03                          0.0   
+4                         0.02                          0.0   
+
+   dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate   
+0                   0.0                       0.0                   0.0  \
+1                   0.0                       0.0                   0.0   
+2                   0.0                       0.0                   0.0   
+3                   0.0                       0.0                   0.0   
+4                   0.0                       0.0                   0.0   
+
+   dst_host_srv_rerror_rate   label  
+0                       0.0  normal  
+1                       0.0  normal  
+2                       0.0  normal  
+3                       0.0  normal  
+4                       0.0  normal  
+
+[5 rows x 42 columns]
+Données après imputation par le mode :
+   duration  protocol_type service flag  src_bytes  dst_bytes  land   
+0         0              1    http   SF        181       5450     0  \
+1         0              1    http   SF        239        486     0   
+2         0              1    http   SF        235       1337     0   
+3         0              1    http   SF        219       1337     0   
+4         0              1    http   SF        217       2032     0   
+
+   wrong_fragment  urgent  hot  ...  dst_host_srv_count   
+0               0       0    0  ...                   9  \
+1               0       0    0  ...                  19   
+2               0       0    0  ...                  29   
+3               0       0    0  ...                  39   
+4               0       0    0  ...                  49   
+
+   dst_host_same_srv_rate  dst_host_diff_srv_rate   
+0                     1.0                     0.0  \
+1                     1.0                     0.0   
+2                     1.0                     0.0   
+3                     1.0                     0.0   
+4                     1.0                     0.0   
+
+   dst_host_same_src_port_rate  dst_host_srv_diff_host_rate   
+0                         0.11                          0.0  \
+1                         0.05                          0.0   
+2                         0.03                          0.0   
+3                         0.03                          0.0   
+4                         0.02                          0.0   
+
+   dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate   
+0                   0.0                       0.0                   0.0  \
+1                   0.0                       0.0                   0.0   
+2                   0.0                       0.0                   0.0   
+3                   0.0                       0.0                   0.0   
+4                   0.0                       0.0                   0.0   
+
+   dst_host_srv_rerror_rate   label  
+0                       0.0  normal  
+1                       0.0  normal  
+2                       0.0  normal  
+3                       0.0  normal  
+4                       0.0  normal  
+
+[5 rows x 42 columns]
+</code></pre>
 </div>
-<div id="e7cd22e2" class="cell code" data-execution_count="16">
-<div class="sourceCode" id="cb3"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple pour encoder une colonne</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>encoder <span class="op">=</span> LabelEncoder()</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&#39;protocol_type&#39;</span>] <span class="op">=</span> encoder.fit_transform(data[<span class="st">&#39;protocol_type&#39;</span>])</span></code></pre></div>
+</div>
+<div id="44b6a760" class="cell code" data-execution_count="34">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Séparer les colonnes numériques uniquement</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>data_numeric <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[np.number])</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Appliquer l&#39;imputation KNN uniquement sur les colonnes numériques</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>imputer <span class="op">=</span> KNNImputer(n_neighbors<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>data_knn_imputed <span class="op">=</span> pd.DataFrame(imputer.fit_transform(data_numeric), columns<span class="op">=</span>data_numeric.columns)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Réintégrer les colonnes non numériques si nécessaire</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>data_final <span class="op">=</span> pd.concat([data_knn_imputed, data.select_dtypes(exclude<span class="op">=</span>[np.number])], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Données après imputation avec KNN :&quot;</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_final.head())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Données après imputation avec KNN :
+   duration  protocol_type  src_bytes  dst_bytes  land  wrong_fragment   
+0       0.0            1.0      181.0     5450.0   0.0             0.0  \
+1       0.0            1.0      239.0      486.0   0.0             0.0   
+2       0.0            1.0      235.0     1337.0   0.0             0.0   
+3       0.0            1.0      219.0     1337.0   0.0             0.0   
+4       0.0            1.0      217.0     2032.0   0.0             0.0   
+
+   urgent  hot  num_failed_logins  logged_in  ...  dst_host_diff_srv_rate   
+0     0.0  0.0                0.0        1.0  ...                     0.0  \
+1     0.0  0.0                0.0        1.0  ...                     0.0   
+2     0.0  0.0                0.0        1.0  ...                     0.0   
+3     0.0  0.0                0.0        1.0  ...                     0.0   
+4     0.0  0.0                0.0        1.0  ...                     0.0   
+
+   dst_host_same_src_port_rate  dst_host_srv_diff_host_rate   
+0                         0.11                          0.0  \
+1                         0.05                          0.0   
+2                         0.03                          0.0   
+3                         0.03                          0.0   
+4                         0.02                          0.0   
+
+   dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate   
+0                   0.0                       0.0                   0.0  \
+1                   0.0                       0.0                   0.0   
+2                   0.0                       0.0                   0.0   
+3                   0.0                       0.0                   0.0   
+4                   0.0                       0.0                   0.0   
+
+   dst_host_srv_rerror_rate  service  flag   label  
+0                       0.0     http    SF  normal  
+1                       0.0     http    SF  normal  
+2                       0.0     http    SF  normal  
+3                       0.0     http    SF  normal  
+4                       0.0     http    SF  normal  
+
+[5 rows x 42 columns]
+</code></pre>
+</div>
+</div>
+<div id="12e76412" class="cell code" data-execution_count="38">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Vérifier qu&#39;il n&#39;y a plus de valeurs manquantes</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Valeurs manquantes après traitement :&quot;</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_knn_imputed.isnull().<span class="bu">sum</span>())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Valeurs manquantes après traitement :
+duration                       0
+protocol_type                  0
+src_bytes                      0
+dst_bytes                      0
+land                           0
+wrong_fragment                 0
+urgent                         0
+hot                            0
+num_failed_logins              0
+logged_in                      0
+lnum_compromised               0
+lroot_shell                    0
+lsu_attempted                  0
+lnum_root                      0
+lnum_file_creations            0
+lnum_shells                    0
+lnum_access_files              0
+lnum_outbound_cmds             0
+is_host_login                  0
+is_guest_login                 0
+count                          0
+srv_count                      0
+serror_rate                    0
+srv_serror_rate                0
+rerror_rate                    0
+srv_rerror_rate                0
+same_srv_rate                  0
+diff_srv_rate                  0
+srv_diff_host_rate             0
+dst_host_count                 0
+dst_host_srv_count             0
+dst_host_same_srv_rate         0
+dst_host_diff_srv_rate         0
+dst_host_same_src_port_rate    0
+dst_host_srv_diff_host_rate    0
+dst_host_serror_rate           0
+dst_host_srv_serror_rate       0
+dst_host_rerror_rate           0
+dst_host_srv_rerror_rate       0
+dtype: int64
+</code></pre>
+</div>
+</div>
+<div id="7ee01599" class="cell code" data-execution_count="40">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sauvegarder les données traitées dans un nouveau fichier CSV</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data_knn_imputed.to_csv(<span class="st">&quot;KDDCup99cleaned.csv&quot;</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Les données traitées ont été sauvegardées sous le nom &#39;KDDCup99cleaned.csv&#39;.&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Les données traitées ont été sauvegardées sous le nom &#39;KDDCup99cleaned.csv&#39;.
+</code></pre>
+</div>
+</div>
+<div id="e7cd22e2" class="cell code" data-execution_count="41">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple pour encoder une colonne</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>encoder <span class="op">=</span> LabelEncoder()</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&#39;protocol_type&#39;</span>] <span class="op">=</span> encoder.fit_transform(data[<span class="st">&#39;protocol_type&#39;</span>])</span></code></pre></div>
 </div>
 <div id="4ae46c33" class="cell markdown">
 <h3 id="normalisation-">Normalisation :</h3>
 <p>Normalisez les colonnes numériques pour améliorer la convergence du
 modèle.</p>
 </div>
-<div id="91820d79" class="cell code" data-execution_count="17">
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>data_scaled <span class="op">=</span> scaler.fit_transform(data.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;float64&#39;</span>, <span class="st">&#39;int64&#39;</span>]))</span></code></pre></div>
+<div id="84b841bd" class="cell markdown">
+<p><img src="vertopal_09827274d11045d49006052736c459a6/image.png"
+alt="image.png" /></p>
+</div>
+<div id="76837ebb" class="cell markdown">
+<h2 id="a-laide-de-la-formule-mathematique">a l'aide de la formule
+mathematique</h2>
+</div>
+<div id="d7665d1c" class="cell code" data-execution_count="42">
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer le mode pour chaque colonne numérique</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>mode <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;float64&#39;</span>, <span class="st">&#39;int64&#39;</span>]).mode().iloc[<span class="dv">0</span>]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Soustraire le mode (centrer)</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>data_centered_mode <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;float64&#39;</span>, <span class="st">&#39;int64&#39;</span>]) <span class="op">-</span> mode</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculer l&#39;écart-type de chaque colonne</span></span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;float64&#39;</span>, <span class="st">&#39;int64&#39;</span>]).std()</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Normaliser (diviser par l&#39;écart-type)</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>data_normalized <span class="op">=</span> data_centered_mode <span class="op">/</span> std_dev</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Afficher les données centrées et normalisées</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_normalized)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>        duration  protocol_type  src_bytes  dst_bytes  land  wrong_fragment   
+0            0.0       1.737301  -0.000861   0.164951   0.0             0.0  \
+1            0.0       1.737301  -0.000802   0.014709   0.0             0.0   
+2            0.0       1.737301  -0.000807   0.040466   0.0             0.0   
+3            0.0       1.737301  -0.000823   0.040466   0.0             0.0   
+4            0.0       1.737301  -0.000825   0.061501   0.0             0.0   
+...          ...            ...        ...        ...   ...             ...   
+494015       0.0       1.737301  -0.000731   0.056931   0.0             0.0   
+494016       0.0       1.737301  -0.000759   0.069189   0.0             0.0   
+494017       0.0       1.737301  -0.000839   0.036320   0.0             0.0   
+494018       0.0       1.737301  -0.000750   0.036320   0.0             0.0   
+494019       0.0       1.737301  -0.000823   0.037349   0.0             0.0   
+
+        urgent  hot  num_failed_logins  logged_in  ...  dst_host_count   
+0          0.0  0.0                0.0   2.814182  ...       -3.799545  \
+1          0.0  0.0                0.0   2.814182  ...       -3.645092   
+2          0.0  0.0                0.0   2.814182  ...       -3.490639   
+3          0.0  0.0                0.0   2.814182  ...       -3.336186   
+4          0.0  0.0                0.0   2.814182  ...       -3.181732   
+...        ...  ...                ...        ...  ...             ...   
+494015     0.0  0.0                0.0   2.814182  ...       -2.610256   
+494016     0.0  0.0                0.0   2.814182  ...       -3.845881   
+494017     0.0  0.0                0.0   2.814182  ...       -3.691427   
+494018     0.0  0.0                0.0   2.814182  ...       -3.536974   
+494019     0.0  0.0                0.0   2.814182  ...       -3.845881   
+
+        dst_host_srv_count  dst_host_same_srv_rate  dst_host_diff_srv_rate   
+0                -2.319875                     0.0                     0.0  \
+1                -2.225571                     0.0                     0.0   
+2                -2.131267                     0.0                     0.0   
+3                -2.036963                     0.0                     0.0   
+4                -1.942659                     0.0                     0.0   
+...                    ...                     ...                     ...   
+494015            0.000000                     0.0                     0.0   
+494016            0.000000                     0.0                     0.0   
+494017            0.000000                     0.0                     0.0   
+494018            0.000000                     0.0                     0.0   
+494019            0.000000                     0.0                     0.0   
+
+        dst_host_same_src_port_rate  dst_host_srv_diff_host_rate   
+0                         -1.849124                     0.000000  \
+1                         -1.973784                     0.000000   
+2                         -2.015337                     0.000000   
+3                         -2.015337                     0.000000   
+4                         -2.036114                     0.000000   
+...                             ...                          ...   
+494015                    -2.056891                     1.186721   
+494016                    -1.724464                     1.186721   
+494017                    -1.953007                     1.186721   
+494018                    -1.994561                     1.186721   
+494019                    -1.724464                     1.186721   
+
+        dst_host_serror_rate  dst_host_srv_serror_rate  dst_host_rerror_rate   
+0                   0.000000                  0.000000                   0.0  \
+1                   0.000000                  0.000000                   0.0   
+2                   0.000000                  0.000000                   0.0   
+3                   0.000000                  0.000000                   0.0   
+4                   0.000000                  0.000000                   0.0   
+...                      ...                       ...                   ...   
+494015              0.000000                  0.026252                   0.0   
+494016              0.000000                  0.026252                   0.0   
+494017              0.157649                  0.026252                   0.0   
+494018              0.105099                  0.026252                   0.0   
+494019              0.000000                  0.026252                   0.0   
+
+        dst_host_srv_rerror_rate  
+0                            0.0  
+1                            0.0  
+2                            0.0  
+3                            0.0  
+4                            0.0  
+...                          ...  
+494015                       0.0  
+494016                       0.0  
+494017                       0.0  
+494018                       0.0  
+494019                       0.0  
+
+[494020 rows x 39 columns]
+</code></pre>
+</div>
+</div>
+<div id="96ee3d05" class="cell markdown">
+<h2 id="a-laide-de-la-biblioteque">a l'aide de la biblioteque</h2>
+</div>
+<div id="91820d79" class="cell code" data-execution_count="43">
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> MinMaxScaler()</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>data_scaled <span class="op">=</span> scaler.fit_transform(data.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;float64&#39;</span>, <span class="st">&#39;int64&#39;</span>]))</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data_scaled)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[[0.00000000e+00 5.00000000e-01 2.61041764e-07 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 5.00000000e-01 3.44690506e-07 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 5.00000000e-01 3.38921627e-07 ... 0.00000000e+00
+  0.00000000e+00 0.00000000e+00]
+ ...
+ [0.00000000e+00 5.00000000e-01 2.92770597e-07 ... 1.00000000e-02
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 5.00000000e-01 4.19685930e-07 ... 1.00000000e-02
+  0.00000000e+00 0.00000000e+00]
+ [0.00000000e+00 5.00000000e-01 3.15846112e-07 ... 1.00000000e-02
+  0.00000000e+00 0.00000000e+00]]
+</code></pre>
+</div>
 </div>
 <div id="f9c0f16b" class="cell markdown">
 <h2 id="3-entraîner-le-modèle-gmm">3. Entraîner le Modèle GMM</h2>
 <h3 id="initialisation-">Initialisation :</h3>
 <p>Définissez un modèle GMM avec un nombre optimal de composantes.</p>
 </div>
-<div id="90e9b532" class="cell code" data-execution_count="18">
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.mixture <span class="im">import</span> GaussianMixture</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>gmm <span class="op">=</span> GaussianMixture(n_components<span class="op">=</span><span class="dv">2</span>, covariance_type<span class="op">=</span><span class="st">&#39;full&#39;</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code></pre></div>
+<div id="dd922757" class="cell markdown">
+<p><img src="vertopal_09827274d11045d49006052736c459a6/image.png"
+alt="image.png" /></p>
+</div>
+<div id="9447d9b7" class="cell markdown">
+<h2 id="a-laide-des-fonctions-mathematiques">a l'aide des fonctions
+mathematiques</h2>
+</div>
+<div id="a2e04217" class="cell code" data-execution_count="44">
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> multivariate_normal</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction pour initialiser les paramètres du modèle GMM</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> initialize_parameters(X, K):</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    n, d <span class="op">=</span> X.shape</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialisation des poids (pi_k)</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    pi <span class="op">=</span> np.ones(K) <span class="op">/</span> K</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialisation des moyennes (mu_k)</span></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>    mu <span class="op">=</span> X[np.random.choice(n, K, <span class="va">False</span>)]</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialisation des matrices de covariance (Sigma_k)</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>    sigma <span class="op">=</span> np.array([np.cov(X.T) <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(K)])</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pi, mu, sigma</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Fonction EM pour le modèle de mélange gaussien</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> fit_gmm(X, K, max_iter<span class="op">=</span><span class="dv">100</span>, tol<span class="op">=</span><span class="fl">1e-6</span>):</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    n, d <span class="op">=</span> X.shape</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>    pi, mu, sigma <span class="op">=</span> initialize_parameters(X, K)</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(max_iter):</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># E-step : calcul des responsabilités (gamma_ik)</span></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>        gamma <span class="op">=</span> np.zeros((n, K))</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(K):</span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>            gamma[:, k] <span class="op">=</span> pi[k] <span class="op">*</span> multivariate_normal.pdf(X, mu[k], sigma[k])</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Normaliser pour obtenir des probabilités</span></span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>        gamma <span class="op">/=</span> gamma.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)[:, np.newaxis]</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>        <span class="co"># M-step : mise à jour des paramètres</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>        N_k <span class="op">=</span> gamma.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Mise à jour des poids (pi_k)</span></span>
+<span id="cb21-33"><a href="#cb21-33" aria-hidden="true" tabindex="-1"></a>        pi <span class="op">=</span> N_k <span class="op">/</span> n</span>
+<span id="cb21-34"><a href="#cb21-34" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-35"><a href="#cb21-35" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Mise à jour des moyennes (mu_k)</span></span>
+<span id="cb21-36"><a href="#cb21-36" aria-hidden="true" tabindex="-1"></a>        mu <span class="op">=</span> (gamma.T <span class="op">@</span> X) <span class="op">/</span> N_k[:, np.newaxis]</span>
+<span id="cb21-37"><a href="#cb21-37" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-38"><a href="#cb21-38" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Mise à jour des covariances (Sigma_k)</span></span>
+<span id="cb21-39"><a href="#cb21-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(K):</span>
+<span id="cb21-40"><a href="#cb21-40" aria-hidden="true" tabindex="-1"></a>            diff <span class="op">=</span> X <span class="op">-</span> mu[k]</span>
+<span id="cb21-41"><a href="#cb21-41" aria-hidden="true" tabindex="-1"></a>            sigma[k] <span class="op">=</span> (gamma[:, k] <span class="op">*</span> diff.T) <span class="op">@</span> diff <span class="op">/</span> N_k[k]</span>
+<span id="cb21-42"><a href="#cb21-42" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-43"><a href="#cb21-43" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Calcul de la log-vraisemblance pour vérifier la convergence</span></span>
+<span id="cb21-44"><a href="#cb21-44" aria-hidden="true" tabindex="-1"></a>        log_likelihood <span class="op">=</span> np.<span class="bu">sum</span>(np.log(gamma.<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)))</span>
+<span id="cb21-45"><a href="#cb21-45" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-46"><a href="#cb21-46" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Convergence</span></span>
+<span id="cb21-47"><a href="#cb21-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> np.<span class="bu">abs</span>(log_likelihood <span class="op">-</span> prev_log_likelihood) <span class="op">&lt;</span> tol:</span>
+<span id="cb21-48"><a href="#cb21-48" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f&#39;Convergence atteinte après </span><span class="sc">{</span>i<span class="sc">}</span><span class="ss"> itérations.&#39;</span>)</span>
+<span id="cb21-49"><a href="#cb21-49" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span>
+<span id="cb21-50"><a href="#cb21-50" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb21-51"><a href="#cb21-51" aria-hidden="true" tabindex="-1"></a>        prev_log_likelihood <span class="op">=</span> log_likelihood</span>
+<span id="cb21-52"><a href="#cb21-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb21-53"><a href="#cb21-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pi, mu, sigma</span>
+<span id="cb21-54"><a href="#cb21-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-55"><a href="#cb21-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Exemple d&#39;utilisation avec des données simulées</span></span>
+<span id="cb21-56"><a href="#cb21-56" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb21-57"><a href="#cb21-57" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack([</span>
+<span id="cb21-58"><a href="#cb21-58" aria-hidden="true" tabindex="-1"></a>    np.random.multivariate_normal([<span class="dv">0</span>, <span class="dv">0</span>], [[<span class="dv">1</span>, <span class="fl">0.5</span>], [<span class="fl">0.5</span>, <span class="dv">1</span>]], <span class="dv">200</span>),</span>
+<span id="cb21-59"><a href="#cb21-59" aria-hidden="true" tabindex="-1"></a>    np.random.multivariate_normal([<span class="dv">5</span>, <span class="dv">5</span>], [[<span class="dv">1</span>, <span class="op">-</span><span class="fl">0.5</span>], [<span class="op">-</span><span class="fl">0.5</span>, <span class="dv">1</span>]], <span class="dv">200</span>)</span>
+<span id="cb21-60"><a href="#cb21-60" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb21-61"><a href="#cb21-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-62"><a href="#cb21-62" aria-hidden="true" tabindex="-1"></a><span class="co"># Apprentissage du modèle GMM avec 2 composantes</span></span>
+<span id="cb21-63"><a href="#cb21-63" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb21-64"><a href="#cb21-64" aria-hidden="true" tabindex="-1"></a>pi, mu, sigma <span class="op">=</span> fit_gmm(X, K)</span>
+<span id="cb21-65"><a href="#cb21-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-66"><a href="#cb21-66" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Poids des composantes (pi):&quot;</span>, pi)</span>
+<span id="cb21-67"><a href="#cb21-67" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Moyennes des composantes (mu):&quot;</span>, mu)</span>
+<span id="cb21-68"><a href="#cb21-68" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Matrices de covariance des composantes (sigma):&quot;</span>, sigma)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Convergence atteinte après 1 itérations.
+Poids des composantes (pi): [0.54343548 0.45656452]
+Moyennes des composantes (mu): [[2.02613022 2.50389684]
+ [3.0857008  2.44422014]]
+Matrices de covariance des composantes (sigma): [[[6.17492219 6.27396086]
+  [6.27396086 8.01817156]]
+
+ [[8.22378871 6.17480423]
+  [6.17480423 5.85496608]]]
+</code></pre>
+</div>
+</div>
+<div id="e43feed5" class="cell markdown">
+<h2 id="a-laide-de-la-bibliotheques-directement">a l'aide de la
+bibliotheques directement</h2>
+</div>
+<div id="90e9b532" class="cell code" data-execution_count="45">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.mixture <span class="im">import</span> GaussianMixture</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>gmm <span class="op">=</span> GaussianMixture(n_components<span class="op">=</span><span class="dv">2</span>, covariance_type<span class="op">=</span><span class="st">&#39;full&#39;</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(gmm)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>GaussianMixture(n_components=2, random_state=42)
+</code></pre>
+</div>
 </div>
 <div id="a7cf8e68" class="cell markdown">
 <h3 id="entraînement-">Entraînement :</h3>
 <p>Ajustez le modèle sur les données normalisées.</p>
 </div>
-<div id="8f48940e" class="cell code" data-execution_count="19">
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>gmm.fit(data_scaled)</span></code></pre></div>
-<div class="output execute_result" data-execution_count="19">
-<style>#sk-container-id-2 {
+<div id="8f48940e" class="cell code" data-execution_count="47">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>gmm.fit(data_scaled)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="47">
+<style>#sk-container-id-3 {
   /* Definition of color scheme common for light and dark mode */
   --sklearn-color-text: black;
   --sklearn-color-line: gray;
@@ -382,15 +1292,15 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
   }
 }
 
-#sk-container-id-2 {
+#sk-container-id-3 {
   color: var(--sklearn-color-text);
 }
 
-#sk-container-id-2 pre {
+#sk-container-id-3 pre {
   padding: 0;
 }
 
-#sk-container-id-2 input.sk-hidden--visually {
+#sk-container-id-3 input.sk-hidden--visually {
   border: 0;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -402,7 +1312,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
   width: 1px;
 }
 
-#sk-container-id-2 div.sk-dashed-wrapped {
+#sk-container-id-3 div.sk-dashed-wrapped {
   border: 1px dashed var(--sklearn-color-line);
   margin: 0 0.4em 0.5em 0.4em;
   box-sizing: border-box;
@@ -410,7 +1320,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
   background-color: var(--sklearn-color-background);
 }
 
-#sk-container-id-2 div.sk-container {
+#sk-container-id-3 div.sk-container {
   /* jupyter's `normalize.less` sets `[hidden] { display: none; }`
      but bootstrap.min.css set `[hidden] { display: none !important; }`
      so we also need the `!important` here to be able to override the
@@ -420,7 +1330,7 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a hr
   position: relative;
 }
 
-#sk-container-id-2 div.sk-text-repr-fallback {
+#sk-container-id-3 div.sk-text-repr-fallback {
   display: none;
 }
 
@@ -436,14 +1346,14 @@ div.sk-item {
 
 /* Parallel-specific style estimator block */
 
-#sk-container-id-2 div.sk-parallel-item::after {
+#sk-container-id-3 div.sk-parallel-item::after {
   content: "";
   width: 100%;
   border-bottom: 2px solid var(--sklearn-color-text-on-default-background);
   flex-grow: 1;
 }
 
-#sk-container-id-2 div.sk-parallel {
+#sk-container-id-3 div.sk-parallel {
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -451,28 +1361,28 @@ div.sk-item {
   position: relative;
 }
 
-#sk-container-id-2 div.sk-parallel-item {
+#sk-container-id-3 div.sk-parallel-item {
   display: flex;
   flex-direction: column;
 }
 
-#sk-container-id-2 div.sk-parallel-item:first-child::after {
+#sk-container-id-3 div.sk-parallel-item:first-child::after {
   align-self: flex-end;
   width: 50%;
 }
 
-#sk-container-id-2 div.sk-parallel-item:last-child::after {
+#sk-container-id-3 div.sk-parallel-item:last-child::after {
   align-self: flex-start;
   width: 50%;
 }
 
-#sk-container-id-2 div.sk-parallel-item:only-child::after {
+#sk-container-id-3 div.sk-parallel-item:only-child::after {
   width: 0;
 }
 
 /* Serial-specific style estimator block */
 
-#sk-container-id-2 div.sk-serial {
+#sk-container-id-3 div.sk-serial {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -490,14 +1400,14 @@ clickable and can be expanded/collapsed.
 
 /* Pipeline and ColumnTransformer style (default) */
 
-#sk-container-id-2 div.sk-toggleable {
+#sk-container-id-3 div.sk-toggleable {
   /* Default theme specific background. It is overwritten whether we have a
   specific estimator or a Pipeline/ColumnTransformer */
   background-color: var(--sklearn-color-background);
 }
 
 /* Toggleable label */
-#sk-container-id-2 label.sk-toggleable__label {
+#sk-container-id-3 label.sk-toggleable__label {
   cursor: pointer;
   display: block;
   width: 100%;
@@ -507,7 +1417,7 @@ clickable and can be expanded/collapsed.
   text-align: center;
 }
 
-#sk-container-id-2 label.sk-toggleable__label-arrow:before {
+#sk-container-id-3 label.sk-toggleable__label-arrow:before {
   /* Arrow on the left of the label */
   content: "▸";
   float: left;
@@ -515,13 +1425,13 @@ clickable and can be expanded/collapsed.
   color: var(--sklearn-color-icon);
 }
 
-#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {
+#sk-container-id-3 label.sk-toggleable__label-arrow:hover:before {
   color: var(--sklearn-color-text);
 }
 
 /* Toggleable content - dropdown */
 
-#sk-container-id-2 div.sk-toggleable__content {
+#sk-container-id-3 div.sk-toggleable__content {
   max-height: 0;
   max-width: 0;
   overflow: hidden;
@@ -530,12 +1440,12 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-2 div.sk-toggleable__content.fitted {
+#sk-container-id-3 div.sk-toggleable__content.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-2 div.sk-toggleable__content pre {
+#sk-container-id-3 div.sk-toggleable__content pre {
   margin: 0.2em;
   border-radius: 0.25em;
   color: var(--sklearn-color-text);
@@ -543,79 +1453,79 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-2 div.sk-toggleable__content.fitted pre {
+#sk-container-id-3 div.sk-toggleable__content.fitted pre {
   /* unfitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
-#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {
+#sk-container-id-3 input.sk-toggleable__control:checked~div.sk-toggleable__content {
   /* Expand drop-down */
   max-height: 200px;
   max-width: 100%;
   overflow: auto;
 }
 
-#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
+#sk-container-id-3 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {
   content: "▾";
 }
 
 /* Pipeline/ColumnTransformer-specific style */
 
-#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-3 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-2 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-3 div.sk-label.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator-specific style */
 
 /* Colorize estimator box */
-#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-3 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-2 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
+#sk-container-id-3 div.sk-estimator.fitted input.sk-toggleable__control:checked~label.sk-toggleable__label {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
-#sk-container-id-2 div.sk-label label.sk-toggleable__label,
-#sk-container-id-2 div.sk-label label {
+#sk-container-id-3 div.sk-label label.sk-toggleable__label,
+#sk-container-id-3 div.sk-label label {
   /* The background is the default theme color */
   color: var(--sklearn-color-text-on-default-background);
 }
 
 /* On hover, darken the color of the background */
-#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {
+#sk-container-id-3 div.sk-label:hover label.sk-toggleable__label {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
 /* Label box, darken color on hover, fitted */
-#sk-container-id-2 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
+#sk-container-id-3 div.sk-label.fitted:hover label.sk-toggleable__label.fitted {
   color: var(--sklearn-color-text);
   background-color: var(--sklearn-color-fitted-level-2);
 }
 
 /* Estimator label */
 
-#sk-container-id-2 div.sk-label label {
+#sk-container-id-3 div.sk-label label {
   font-family: monospace;
   font-weight: bold;
   display: inline-block;
   line-height: 1.2em;
 }
 
-#sk-container-id-2 div.sk-label-container {
+#sk-container-id-3 div.sk-label-container {
   text-align: center;
 }
 
 /* Estimator-specific */
-#sk-container-id-2 div.sk-estimator {
+#sk-container-id-3 div.sk-estimator {
   font-family: monospace;
   border: 1px dotted var(--sklearn-color-border-box);
   border-radius: 0.25em;
@@ -625,18 +1535,18 @@ clickable and can be expanded/collapsed.
   background-color: var(--sklearn-color-unfitted-level-0);
 }
 
-#sk-container-id-2 div.sk-estimator.fitted {
+#sk-container-id-3 div.sk-estimator.fitted {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-0);
 }
 
 /* on hover */
-#sk-container-id-2 div.sk-estimator:hover {
+#sk-container-id-3 div.sk-estimator:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-2);
 }
 
-#sk-container-id-2 div.sk-estimator.fitted:hover {
+#sk-container-id-3 div.sk-estimator.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-2);
 }
@@ -723,7 +1633,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 
 /* "?"-specific style due to the `<a>` HTML tag */
 
-#sk-container-id-2 a.estimator_doc_link {
+#sk-container-id-3 a.estimator_doc_link {
   float: right;
   font-size: 1rem;
   line-height: 1em;
@@ -738,25 +1648,25 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
   border: var(--sklearn-color-unfitted-level-1) 1pt solid;
 }
 
-#sk-container-id-2 a.estimator_doc_link.fitted {
+#sk-container-id-3 a.estimator_doc_link.fitted {
   /* fitted */
   border: var(--sklearn-color-fitted-level-1) 1pt solid;
   color: var(--sklearn-color-fitted-level-1);
 }
 
 /* On hover */
-#sk-container-id-2 a.estimator_doc_link:hover {
+#sk-container-id-3 a.estimator_doc_link:hover {
   /* unfitted */
   background-color: var(--sklearn-color-unfitted-level-3);
   color: var(--sklearn-color-background);
   text-decoration: none;
 }
 
-#sk-container-id-2 a.estimator_doc_link.fitted:hover {
+#sk-container-id-3 a.estimator_doc_link.fitted:hover {
   /* fitted */
   background-color: var(--sklearn-color-fitted-level-3);
 }
-</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GaussianMixture(n_components=2, random_state=42)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;GaussianMixture<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.mixture.GaussianMixture.html">?<span>Documentation for GaussianMixture</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>GaussianMixture(n_components=2, random_state=42)</pre></div> </div></div></div></div>
+</style><div id="sk-container-id-3" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>GaussianMixture(n_components=2, random_state=42)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator fitted sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-3" type="checkbox" checked><label for="sk-estimator-id-3" class="sk-toggleable__label fitted sk-toggleable__label-arrow fitted">&nbsp;&nbsp;GaussianMixture<a class="sk-estimator-doc-link fitted" rel="noreferrer" target="_blank" href="https://scikit-learn.org/1.4/modules/generated/sklearn.mixture.GaussianMixture.html">?<span>Documentation for GaussianMixture</span></a><span class="sk-estimator-doc-link fitted">i<span>Fitted</span></span></label><div class="sk-toggleable__content fitted"><pre>GaussianMixture(n_components=2, random_state=42)</pre></div> </div></div></div></div>
 </div>
 </div>
 <div id="cd1850fd" class="cell markdown">
@@ -764,14 +1674,18 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Utilisez les scores de vraisemblance pour identifier des
 anomalies.</p>
 </div>
-<div id="c70d7875" class="cell code" data-execution_count="20">
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> gmm.score_samples(data_scaled)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>threshold <span class="op">=</span> scores.mean() <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> scores.std()  <span class="co"># Définir un seuil basé sur la distribution</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>anomalies <span class="op">=</span> data[scores <span class="op">&lt;</span> threshold]</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Nombre d&#39;anomalies détectées : </span><span class="sc">{</span><span class="bu">len</span>(anomalies)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div id="c0beb279" class="cell markdown">
+<p><img src="vertopal_09827274d11045d49006052736c459a6/image.png"
+alt="image.png" /></p>
+</div>
+<div id="c70d7875" class="cell code" data-execution_count="48">
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>scores <span class="op">=</span> gmm.score_samples(data_scaled)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>threshold <span class="op">=</span> scores.mean() <span class="op">-</span> <span class="dv">2</span> <span class="op">*</span> scores.std()  <span class="co"># Définir un seuil basé sur la distribution</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>anomalies <span class="op">=</span> data[scores <span class="op">&lt;</span> threshold]</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Nombre d&#39;anomalies détectées : </span><span class="sc">{</span><span class="bu">len</span>(anomalies)<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
 <div class="output stream stdout">
-<pre><code>Nombre d&#39;anomalies détectées : 561
+<pre><code>Nombre d&#39;anomalies détectées : 432
 </code></pre>
 </div>
 </div>
@@ -782,58 +1696,70 @@ Anomalies</h2>
 <p>Observez la répartition des anomalies en utilisant
 <code>src_bytes</code> vs <code>dst_bytes</code>.</p>
 </div>
-<div id="0fa450cd" class="cell code" data-execution_count="21">
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">&#39;src_bytes&#39;</span>], data[<span class="st">&#39;dst_bytes&#39;</span>], c<span class="op">=</span><span class="st">&#39;blue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Normal&#39;</span>)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(anomalies[<span class="st">&#39;src_bytes&#39;</span>], anomalies[<span class="st">&#39;dst_bytes&#39;</span>], c<span class="op">=</span><span class="st">&#39;red&#39;</span>, label<span class="op">=</span><span class="st">&#39;Anomalie&#39;</span>)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Source Bytes&#39;</span>)</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Destination Bytes&#39;</span>)</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a> </span></code></pre></div>
+<div id="0fa450cd" class="cell code" data-execution_count="49">
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(data[<span class="st">&#39;src_bytes&#39;</span>], data[<span class="st">&#39;dst_bytes&#39;</span>], c<span class="op">=</span><span class="st">&#39;blue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Normal&#39;</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(anomalies[<span class="st">&#39;src_bytes&#39;</span>], anomalies[<span class="st">&#39;dst_bytes&#39;</span>], c<span class="op">=</span><span class="st">&#39;red&#39;</span>, label<span class="op">=</span><span class="st">&#39;Anomalie&#39;</span>)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Source Bytes&#39;</span>)</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Destination Bytes&#39;</span>)</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a> </span></code></pre></div>
 <div class="output display_data">
 <p><img
-src="vertopal_abc442efb605443ab32100fbccfb38c8/3151a812f6c0e1c298f43f4209d49fc9ea6f2684.png" /></p>
+src="vertopal_09827274d11045d49006052736c459a6/8a646fac6d69e5ede025c33d209188b58fd2e72c.png" /></p>
 </div>
 </div>
 <div id="e7cc30e0" class="cell markdown">
 <h3 id="visualisation-en-3d-">Visualisation en 3D :</h3>
 <p>Ajoutez une dimension supplémentaire comme <code>duration</code>.</p>
 </div>
-<div id="7889ffb7" class="cell code" data-execution_count="22">
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ax.scatter(data[<span class="st">&#39;src_bytes&#39;</span>], data[<span class="st">&#39;dst_bytes&#39;</span>], data[<span class="st">&#39;duration&#39;</span>], c<span class="op">=</span><span class="st">&#39;blue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Normal&#39;</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(anomalies[<span class="st">&#39;src_bytes&#39;</span>], anomalies[<span class="st">&#39;dst_bytes&#39;</span>], anomalies[<span class="st">&#39;duration&#39;</span>], c<span class="op">=</span><span class="st">&#39;red&#39;</span>, label<span class="op">=</span><span class="st">&#39;Anomalie&#39;</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;Source Bytes&#39;</span>)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;Destination Bytes&#39;</span>)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&#39;Duration&#39;</span>)</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div id="7889ffb7" class="cell code" data-execution_count="50">
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> mpl_toolkits.mplot3d <span class="im">import</span> Axes3D</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plt.figure()</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> fig.add_subplot(<span class="dv">111</span>, projection<span class="op">=</span><span class="st">&#39;3d&#39;</span>)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>ax.scatter(data[<span class="st">&#39;src_bytes&#39;</span>], data[<span class="st">&#39;dst_bytes&#39;</span>], data[<span class="st">&#39;duration&#39;</span>], c<span class="op">=</span><span class="st">&#39;blue&#39;</span>, label<span class="op">=</span><span class="st">&#39;Normal&#39;</span>)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>ax.scatter(anomalies[<span class="st">&#39;src_bytes&#39;</span>], anomalies[<span class="st">&#39;dst_bytes&#39;</span>], anomalies[<span class="st">&#39;duration&#39;</span>], c<span class="op">=</span><span class="st">&#39;red&#39;</span>, label<span class="op">=</span><span class="st">&#39;Anomalie&#39;</span>)</span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">&#39;Source Bytes&#39;</span>)</span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">&#39;Destination Bytes&#39;</span>)</span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>ax.set_zlabel(<span class="st">&#39;Duration&#39;</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <div class="output display_data">
 <p><img
-src="vertopal_abc442efb605443ab32100fbccfb38c8/98be83e75229ab98bb66054bd2a0e7bbc343bab9.png" /></p>
+src="vertopal_09827274d11045d49006052736c459a6/adba7be04f107f7045f0ae85ecfcc095ba3a9ffd.png" /></p>
 </div>
 </div>
-<div id="880d3f61" class="cell markdown">
-<h2 id="5-conclusion">5. Conclusion</h2>
+<div id="c3605ca5" class="cell markdown">
+<h3 id="valeur-ajoutée-du-projet">Valeur Ajoutée du Projet</h3>
+<p>Ce projet apporte plusieurs valeurs ajoutées :</p>
 <ul>
-<li><strong>Performance</strong> : Évaluez les performances du modèle en
-termes de précision, rappel ou autres métriques si vous disposez
-d'étiquettes.</li>
-<li><strong>Améliorations possibles</strong> :
-<ul>
-<li>Testez différents types de covariances (<code>full</code>,
-<code>tied</code>, <code>diag</code>, <code>spherical</code>).</li>
-<li>Comparez avec d'autres modèles non supervisés comme Isolation Forest
-ou LOF (Local Outlier Factor).</li>
-</ul></li>
+<li><strong>Détection Précoce des Menaces</strong> : En identifiant les
+anomalies dans le trafic réseau, ce projet permet de détecter
+précocement des activités malveillantes, réduisant ainsi les risques de
+cyberattaques.</li>
+<li><strong>Amélioration de la Sécurité Réseau</strong> : En surveillant
+continuellement le trafic réseau et en détectant les anomalies, les
+administrateurs réseau peuvent renforcer la sécurité de leur
+infrastructure.</li>
+<li><strong>Automatisation de la Surveillance</strong> : L'utilisation
+de modèles de machine learning comme les GMM permet d'automatiser la
+surveillance du réseau, réduisant ainsi la charge de travail des équipes
+de sécurité.</li>
+<li><strong>Adaptabilité</strong> : Le modèle GMM peut être ajusté et
+amélioré en fonction des nouvelles données, rendant le système de
+détection d'anomalies adaptable aux évolutions du trafic réseau.</li>
+<li><strong>Visualisation et Analyse</strong> : Les visualisations 2D et
+3D des anomalies permettent une analyse rapide et intuitive des données,
+facilitant la prise de décision.</li>
 </ul>
+<p>En somme, ce projet fournit un cadre robuste pour la détection
+d'anomalies dans le trafic réseau, contribuant ainsi à la sécurité et à
+la résilience des systèmes informatiques.</p>
 </div>
 </body>
 </html>
